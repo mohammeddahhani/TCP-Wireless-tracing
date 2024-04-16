@@ -1,0 +1,13 @@
+Options to add:
+- detect MAC OR give MAC as input in .ini
+- same for IP
+- Crop everything until first tcp segment in capture: 
+    ID SYN handshake
+    If not found start with the first TCP seg we find (not S, SA or A)
+- A solution for offsets: identify first TCP seg, TCP ack and first block ack or MAC ack
+- rework each .py using scapy
+- make sure no duplicate IP exist
+
+version 0.1
+- fixed IP, capture exists already, load all file to memory
+- start w/ IP only and check that 1-to-1 correspondance with a MAC address. Usually 1IP - 1 MAC: this correspondance can change. Add a mecanism that checks this correspondance in case of an error.
